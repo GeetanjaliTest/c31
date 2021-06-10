@@ -1,35 +1,3 @@
-/*class Bird extends BaseClass {
-  constructor(x,y){
-    super(x,y,50,50);
-    this.image = loadImage("sprites/bird.png");
-    //1
-    this.smokeImage=loadImage("sprites/smoke.png");
-    //2
-    this.trajectory=[]
-  }
-
-  display() {
-    //this.body.position.x = mouseX;
-    //this.body.position.y = mouseY;
-
-    super.display();
-
-    //6
-    if(this.body.velocity.x>10&&this.body.position.x>200){
-      //3
-    var position=[this.body.position.x,this.body.position.y];
-    //4
-    this.trajectory.push(position);
-    }
-
-
-//5
-    for(var i=0;i<this.trajectory.length;i++){
-      image(this.smokeImage,this.trajectory[i][0],this.trajectory[i][1])
-    }
-  }
-}*/
-
 class Bird extends BaseClass { 
   constructor(x,y){ 
     
@@ -44,8 +12,8 @@ class Bird extends BaseClass {
      display() { 
        
       super.display(); 
-      
-      //this.body.position.x = mouseX; //this.body.position.y = mouseY; 
+
+       /***************code  fixed in line 19 ****************/
       if(this.body.velocity.x>10 && this.body.position.x>200){
         var position = [this.body.position.x,this.body.position.y] 
         this.trajectory.push(position) 
